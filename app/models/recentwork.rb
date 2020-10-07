@@ -1,0 +1,2 @@
+class Recentwork < ApplicationRecord
+end
