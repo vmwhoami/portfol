@@ -4,10 +4,11 @@
 
 
 <% @portfolios.each do |item| %>
-<h2><%= item.title %></h2>
+<h2><%= link_to item.title, recentwork_path(item) %></h2>
 <h3><%= item.subtitle %></h3>
 <p><%= item.body %></p>
 <% image_tag item.thumb_image unless item.thumb_image.nil? %>
  <%= image_tag item.main_image  unless item.thumb_image.nil?  %> 
 <%= link_to  "Edit", edit_recentwork_path(item.id) %>
+<%= link_to  "Delete", recentwork_path(item), method: :delete, data:{confirm: "Are you sure?"}%>
 <% end %>

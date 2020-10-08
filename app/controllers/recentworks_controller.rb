@@ -22,6 +22,7 @@ class RecentworksController < ApplicationController
   end
 
 
+
 def edit
   @portfolio_item = Recentwork.find(params[:id])
 end
@@ -38,6 +39,21 @@ end
       end
     end
   end
+
+
+  def show
+    @portfolio_item = Recentwork.find(params[:id])
+  end
+ 
+  def destroy
+    @portfolio_item = Recentwork.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to recentworks_path, notice: 'Portfolio items was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
 
   private
   def permited_params
