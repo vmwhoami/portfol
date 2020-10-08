@@ -1,4 +1,5 @@
 class Blog < ApplicationRecord
+  belongs_to :topic, class_name: "Topic", foreign_key: "topic_id"
   enum status: {draft: 0, published: 1}
   #slug implementation 
   extend FriendlyId
