@@ -1,10 +1,13 @@
 <h1>My recent works</h1>
 
+<%= link_to  "Create new item", new_recentwork_path %>
+
+
 <% @portfolios.each do |item| %>
 <h2><%= item.title %></h2>
 <h3><%= item.subtitle %></h3>
 <p><%= item.body %></p>
 <% image_tag item.thumb_image unless item.thumb_image.nil? %>
  <%= image_tag item.main_image  unless item.thumb_image.nil?  %> 
-
+<%= link_to  "Edit", edit_recentwork_path(item.id) %>
 <% end %>
