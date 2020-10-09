@@ -20,5 +20,9 @@
        <% end %>
       
     <%= yield %>
+
+    <% if session[:where_from] %>
+      <p>Thank you for visiting from <%= session[:where_from]  %></p>
+    <% end %>
   </body>
 </html>

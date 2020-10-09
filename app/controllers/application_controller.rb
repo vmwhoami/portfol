@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
-
-  include DeviseWhitelist
-
+## Devise whitelisting the :name atribute
+  include DeviseWhitelistConcern
+## Include the session catch session[:where_from]
+  include SessionSourceConcern
+ 
 
 end
