@@ -54,7 +54,7 @@ puts "Skills created"
   end
   puts "Recentwork created successfully"
   3.times do |t| 
-    Recentwork.last.create!(
+    Recentwork.last.technologies.create!(
       name:"Technology #{t}"
     )
   end
