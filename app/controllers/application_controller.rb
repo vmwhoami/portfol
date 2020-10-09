@@ -4,5 +4,5 @@ class ApplicationController < ActionController::Base
 ## Include the session catch session[:where_from]
   include SessionSourceConcern
  
-
+  include  GuestUserConcern
 end
