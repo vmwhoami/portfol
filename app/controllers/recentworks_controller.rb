@@ -6,6 +6,7 @@ class RecentworksController < ApplicationController
 
    def new
     @portfolio_item = Recentwork.new
+   3.times{ @portfolio_item.technologies.build }
   end
 
   def create
@@ -57,6 +58,6 @@ end
 
   private
   def permited_params
-    params.require(:recentwork).permit(:title,:subtitle,:body)
+    params.require(:recentwork).permit(:title,:subtitle,:body, technologies_attributes: [:name])
   end
 end
