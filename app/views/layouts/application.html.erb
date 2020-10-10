@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="keywords" content="<%= keywords %>">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,6 +15,14 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     
+<div class="nav">
+  <div class="nav__link"><%= link_to "Home", root_path %> </div>
+  <div class="nav__link"><%= link_to "About-me", about_path %> </div>
+  <div class="nav__link"><%= link_to "Contact", contact_path %> </div>
+  <div class="nav__link"><%= link_to "Blog", blogs_path %> </div>
+  <div class="nav__link"><%= link_to "Portfolio", portfolio_path %> </div>
+</div>
+
     <%= user_functionality %>
       
     <%= yield %>

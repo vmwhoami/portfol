@@ -15,5 +15,9 @@ module SharedHelper
     end  
   end
    
+  def keywords
+    "vmwhoami, freelancer, developer, rails 6, ruby, Vitalie Melnic, vmwhoiam"
+  end
+  
 
 end
