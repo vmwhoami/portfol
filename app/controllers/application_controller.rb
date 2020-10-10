@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelistConcern
 ## Include the session catch session[:where_from]
   include SessionSourceConcern
- 
+ ## Implementation of Null object pattern
   include  GuestUserConcern
 end
