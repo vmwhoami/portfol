@@ -2,7 +2,8 @@ module SharedHelper
 
   def visitor_from
     if session[:where_from] 
-      content_tag(:p, "Thank you for visiting from #{session[:where_from]}",class: "where_from" )
+      greeting = "Thank you for visiting from #{session[:where_from]}"
+      content_tag(:p, greeting,class: "where_from" )
     #  "<p>Thank you for visiting from #{session[:where_from]}</p>".html_safe
     end  
   end
