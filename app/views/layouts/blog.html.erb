@@ -6,13 +6,12 @@
     <%= csp_meta_tag %>
 
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-        <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+ <%= render 'shared/notices' %>
        <% if current_user.is_a?(User) %>
           <%= link_to  "Logout", destroy_user_session_path, method: :delete %>
           <% else %>
@@ -22,6 +21,6 @@
       
     <%= yield %>
 
- 
+   <%= render "shared/nav",on: 'main' %>
   </body>
 </html>
