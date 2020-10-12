@@ -39,6 +39,7 @@ body{
   &__container{
     display: flex;
     padding: 2.5rem;
+    align-items: center;
   }
 }
 
@@ -64,10 +65,9 @@ body{
   height: 100%;
   display: flex;
   justify-content: center;
-   
+  align-items: flex-end;
 
   &__container{
-    justify-self: center;
     width: 50rem;
   }
 
@@ -80,19 +80,29 @@ body{
   &__heading{
     font-size: 4.5rem;
     text-transform: uppercase;
+ 
+    margin: 1rem 0 1rem;
   }
   &__name{
-   
+    font-weight: 800;
     color:$blue-color ;
   }
 
   &__description{
     font-size: 1.6rem;
     line-height: 3.5rem;
+    margin-bottom: 2rem;
   }
 }
 
 
 .btn{
-  
+  text-transform: uppercase;
+  background-color: $blue-color;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 2.5rem;
 }
