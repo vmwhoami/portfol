@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @blog_title %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="keywords" content="<%= keywords %>">
+    <%= stylesheet_link_tag 'recentworks', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"  %>
+  
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <div class="container">
+      <%= yield %>
+   </div>
+  </body>
+</html>

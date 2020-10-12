@@ -1,5 +1,5 @@
 class RecentworksController < ApplicationController
-
+  layout "home"
   def index
   @portfolios = Recentwork.all
   end
