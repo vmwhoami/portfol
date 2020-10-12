@@ -17,8 +17,20 @@ body{
   font-weight: 400;
   font-size: 1.6rem;
   box-sizing: border-box;
+  background-color:$black-color;
+  color: white;
 }
 
 .container{
   padding: 2.5rem;
+  display: flex;
+}
+
+.image{
+  height: calc(100vh - 6rem);
+
+  &__img{
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
 }
