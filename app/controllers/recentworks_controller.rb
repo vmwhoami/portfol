@@ -1,4 +1,7 @@
 class RecentworksController < ApplicationController
+ 
+  before_action :find_id, only: %i[edit update show destroy]
+
   layout "home"
   def index
   @portfolios = Recentwork.all
@@ -10,10 +13,10 @@ class RecentworksController < ApplicationController
   end
 
   def create
-    @portfolio_item  = Recentwork.new(permited_params)
+     
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to recentworks_path, notice: 'Portfolio item was successfully created' }
+        format.html { redirect_to portfolio_path, notice: 'Portfolio item was successfully created' }
         format.json { render :show, status: :created, location: @portfolio_item }
       else
         format.html { render :new }
@@ -25,14 +28,14 @@ class RecentworksController < ApplicationController
 
 
 def edit
-  @portfolio_item = Recentwork.find(params[:id])
+ 
 end
 
   def update
-    @portfolio_item = Recentwork.find(params[:id])
+ 
     respond_to do |format|
       if @portfolio_item.update(permited_params)
-        format.html { redirect_to recentworks_path, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to portfolio_path, notice: 'Portfolio was successfully updated.' }
         format.json { render :show, status: :ok, location: @portfolio_item }
       else
         format.html { render :edit }
@@ -43,20 +46,24 @@ end
 
 
   def show
-    @portfolio_item = Recentwork.find(params[:id])
+    
   end
  
   def destroy
-    @portfolio_item = Recentwork.find(params[:id])
+     
     @portfolio_item.destroy
     respond_to do |format|
-      format.html { redirect_to recentworks_path, notice: 'Portfolio items was successfully destroyed.' }
+      format.html { redirect_to portfolio_path, notice: 'Portfolio items was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
 
   private
+def find_id
+  @portfolio_item = Recentwork.find(params[:id])
+end
+
   def permited_params
     params.require(:recentwork).permit(:title,:subtitle,:body, technologies_attributes: [:name])
   end
