@@ -51,3 +51,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.4.0'
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'vmwhoami_copyright', git: 'https://github.com/vmwhoami/vmwhoami_copyright'

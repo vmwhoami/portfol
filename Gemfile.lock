@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/vmwhoami/vmwhoami_copyright
+  revision: eea53f9cc99470637241505fa08f20fd2acbb47a
+  specs:
+    vmwhoami_copyright (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -220,6 +226,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   tzinfo-data
+  vmwhoami_copyright!
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
 
