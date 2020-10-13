@@ -1,7 +1,49 @@
-<div class="<%= :on %>">
-  <div class="nav__link"><%= link_to "Home", root_path %> </div>
-  <div class="nav__link"><%= link_to "About-me", about_path %> </div>
-  <div class="nav__link"><%= link_to "Contact", contact_path %> </div>
-  <div class="nav__link"><%= link_to "Blog", blogs_path %> </div>
-  <div class="nav__link"><%= link_to "Portfolio", portfolio_path %> </div>
-</div>
+<nav class="mynav">
+  <%= render "shared/icons" %>
+
+  
+  <div class="mynav__link">
+    <i class="mynav__icon">
+      <svg>
+        <use xlink:href="#icon-home" />
+      </svg>
+    </i>
+    <%= link_to "Home", root_path, class: 'mynav__link__a' %>
+  </div>
+
+  <div class="mynav__link">
+    <i class="mynav__icon">
+      <svg>
+        <use xlink:href="#icon-user" />
+      </svg>
+    </i>
+    <%= link_to "Portfolio", portfolio_path, class: 'mynav__link__a' %>
+  </div>
+
+  <div class="mynav__link">
+    <i class="mynav__icon">
+      <svg>
+        <use xlink:href="#icon-suitcase" />
+      </svg>
+    </i>
+    <%= link_to "About-me", about_path, class: 'mynav__link__a' %>
+  </div>
+
+  <div class="mynav__link">
+    <i class="mynav__icon">
+      <svg>
+        <use xlink:href="#icon-envelope" />
+      </svg>
+    </i>
+    <%= link_to "Contact", contact_path, class: 'mynav__link__a' %>
+  </div>
+
+
+  <div class="mynav__link">
+    <i class="mynav__icon">
+      <svg>
+        <use xlink:href="#icon-pen1" />
+      </svg>
+    </i>
+    <%= link_to "Blog", blogs_path, class: 'mynav__link__a' %> </div>
+</nav>

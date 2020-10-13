@@ -1,9 +1,11 @@
 
+
 $black-color: #111;
-$blue-color: #4169e1;
+$main-color: #4169e1;
 $open-sans:  'Open Sans', sans-serif;
+$white:rgb(248, 248, 248);
 
-
+@import 'btn';
 *,
 *::before,
 *::after {
@@ -30,9 +32,9 @@ body{
 
   width: 100%;
   height: 100vh;
-  background: $blue-color;
+  background: $main-color;
         background: linear-gradient(75deg,
-        $blue-color 0%,$blue-color 25%,
+        $main-color 0%,$main-color 25%,
           rgba(17,17,17,1) 25%);
 
   &__container{
@@ -86,7 +88,7 @@ body{
   }
   &__name{
     font-weight: 800;
-    color:$blue-color ;
+    color:$main-color ;
   }
 
   &__description{
@@ -97,24 +99,49 @@ body{
 }
 
 
-.mybutton,
-.mybutton:focus,
-.mybutton:active{
-  text-transform: uppercase;
-  background-color: $blue-color;
-  color: azure;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1.5rem 3rem;
-  border: none;
-  border-radius: 2.5rem;
-  outline: none;
+.mynav{
+  position: fixed;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 
-  transition: all .3s;
+  &__link{
+    
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    background-color: rgb(49, 49, 49);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
 
-  &:hover
-  {
-    color: #000;
-    border: none;
+    &__a,
+    &__a:link{
+       display: none;
+      }
+
+
+    &__a:hover{
+      color: $white;
+    }
   }
+
+  &__icon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
+
+
+svg{
+  fill: $white;
+  width: 3rem;
+  height: 3rem;
+}
+

@@ -1,5 +1,4 @@
 
-
 <main class= "main">
 <div class="main__container">
   <div class="image">
@@ -15,8 +14,18 @@
       I'm a Moldavian based  developer focused on crafting clean & user‑friendly experiences, I am 
       passionate about building excellent software that improves the lives of those around me.
       </p>
-      <button class='mybutton'>More about me</button>  
+      <button class='mybutton'> 
+      More about me
+      <i class="mybutton__icon">
+        <svg>
+            <use xlink:href="#icon-user" />
+        </svg>
+       </i>
+      </button>  
     </div>
   </div>
+
+
   </div>
+    <%= render "shared/nav"  %>
 </main>
