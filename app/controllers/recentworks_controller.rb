@@ -3,11 +3,16 @@ class RecentworksController < ApplicationController
   before_action :find_id, only: %i[edit update show destroy]
 
   layout "home"
+
   def index
   @portfolios = Recentwork.all
   end
 
-   def new
+  def home
+    @main_title = "Vitalie Melnic portfolio website"
+  end
+
+  def new
     @portfolio_item = Recentwork.new
    3.times{ @portfolio_item.technologies.build }
   end
@@ -24,9 +29,7 @@ class RecentworksController < ApplicationController
       end
     end
   end
-
-
-
+  
 def edit
  
 end
