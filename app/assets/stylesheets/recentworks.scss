@@ -22,8 +22,7 @@ body{
   font-size: 1.6rem;
   box-sizing: border-box;
   background-color:$black-color;
-  color: white;
-  font-family: $open-sans;
+   font-family: $open-sans;
 }
 
 
@@ -69,11 +68,13 @@ body{
 
   &__container{
     width: 50rem;
+    color: azure;
   }
 
   &__intro{
     font-size: 2.2rem;
     text-transform: uppercase;
+  
   }
 
 
@@ -96,10 +97,10 @@ body{
 }
 
 
-.btn{
+.mybutton{
   text-transform: uppercase;
   background-color: $blue-color;
-  color: white;
+  color: azure;
   font-weight: 600;
   letter-spacing: 2px;
   padding: 1.5rem 3rem;
