@@ -5,7 +5,7 @@ $main-color: #4169e1;
 $open-sans:  'Open Sans', sans-serif;
 $white:rgb(248, 248, 248);
 
-@import 'btn';
+@import 'btn','nav';
 *,
 *::before,
 *::after {
@@ -48,6 +48,7 @@ body{
 
 .image{
   height: calc(100vh - 6rem);
+  min-width: 30rem;
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem rgba(0,0,0,.9);
 
@@ -99,44 +100,6 @@ body{
 }
 
 
-.mynav{
-  position: fixed;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-
-  &__link{
-    
-    width: 5rem;
-    height: 5rem;
-    font-size: 1.6rem;
-    margin: 2rem 0;
-    background-color: rgb(49, 49, 49);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-
-    &__a,
-    &__a:link{
-       display: none;
-      }
-
-
-    &__a:hover{
-      color: $white;
-    }
-  }
-
-  &__icon{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-}
 
 
 svg{

@@ -1,7 +1,8 @@
 class RecentworksController < ApplicationController
  
   before_action :find_id, only: %i[edit update show destroy]
-
+  access all: [:show, :index], user: {except: [:destroy,:new,:create,:edit,:update]}, site_admin: :all
+  
   layout "home"
 
   def index
