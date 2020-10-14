@@ -10,7 +10,7 @@ module SharedHelper
 
   def user_functionality
     if current_user.is_a?(GuestUser) 
-      (link_to  "Register", new_user_session_path ) + (link_to  "Login", new_user_session_path) 
+      (link_to  "Register", new_user_registration_path ) + (link_to  "Login", new_user_session_path) 
 
      else  
       link_to  "Logout", destroy_user_session_path, method: :delete  
