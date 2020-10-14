@@ -1,24 +1,60 @@
+@import 'variables';
 
 .mybutton,
 .mybutton:focus,
 .mybutton:active{
   display: inline-block;
   text-transform: uppercase;
-  background-color: $main-color; // color variable
-  color: azure;
+  position: relative;
+  font-size: 1.5rem;
+  background-color:  $main-color; // color variable
+  color: $white-color;
   font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
+  width: 20rem;
+ height:5rem ;
   border: none;
   outline: none;
   border-radius: 2.5rem;
- 
   transition: all .3s;
+  
 
-  &:hover
-  {
-    border: none;
+  &:hover{
+    color: $white-color;
+    text-decoration: none;
   }
-
-
 }
+.mybutton{
+
+
+&__span{
+  position: absolute;
+  top:50%;
+  left: 25%;
+  transform: translate(-10%,-50%);
+  transition: all cubic-bezier(0.44, 0.87, 0.83, 1.04) .3s;
+}
+
+&__icon{
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  top: 45%;
+  left: 75%;
+  transform: translateY(-50%);
+  right: 2rem;
+
+  transition: all cubic-bezier(0.44, 0.87, 0.83, 1.00) .3s;
+}
+ &:hover &__icon{
+  left: 80%;
+  opacity: 1;
+ }
+
+ &:hover &__span{
+  transform: translate(-20%,-50%);
+ }
+}
+
+
+ 
