@@ -1,10 +1,25 @@
 
-<div class="col-sm">
-    <h2><%= link_to item.title, portfolio_show_path(item) %></h2>
-    <h3><%= item.subtitle %></h3>
-    <p><%= item.body %></p>
-    <% image_tag item.thumb_image unless item.thumb_image.nil? %>
-    <%= image_tag item.main_image  unless item.thumb_image.nil?  %> 
-    <%= link_to  "Edit", edit_recentwork_path(item.id) if logged_in?(:site_admin) %>
-    <%= link_to  "Delete", recentwork_path(item), method: :delete, data:{confirm: "Are you sure?"} if logged_in?(:site_admin)%>
-</div>
+
+  <div class="col-md-6 col-lg-6 col-xl-4 ">
+    <div class="card rounded my-5" >
+      <%= image_tag item.thumb_image  unless item.thumb_image.nil? %>
+      <div class="card-body">
+        <h5 class="card-title text-center"> <%= link_to item.title, portfolio_show_path(item), clss:'text-decoration-none' %> </h5>
+        <p class="card-text"> <%= item.body %> </p>
+      </div>
+    </div>
+ </div>
+
+
+
+
+
+     <%# link_to item.title, portfolio_show_path(item) %> 
+     <%# item.subtitle %> 
+     <%# item.body %> 
+    <%# image_tag item.thumb_image unless item.thumb_image.nil? %>
+    <%# image_tag item.main_image  unless item.main_image.nil?  %> 
+    <%# link_to  "Edit", edit_recentwork_path(item.id) if logged_in?(:site_admin) %>
+    <%# link_to  "Delete", recentwork_path(item.id), method: :delete, data:{confirm: "Are you sure?"} if logged_in?(:site_admin)%>
+
+

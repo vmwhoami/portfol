@@ -35,6 +35,8 @@ end
 
   def update
  
+
+ 
     respond_to do |format|
       if @portfolio_item.update(permited_params)
         format.html { redirect_to portfolio_path, notice: 'Portfolio was successfully updated.' }
@@ -52,7 +54,6 @@ end
   end
  
   def destroy
-     
     @portfolio_item.destroy
     respond_to do |format|
       format.html { redirect_to portfolio_path, notice: 'Portfolio items was successfully destroyed.' }
@@ -63,6 +64,7 @@ end
 
   private
 def find_id
+
   @portfolio_item = Recentwork.find(params[:id])
 end
 
