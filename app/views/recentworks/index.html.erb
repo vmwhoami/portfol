@@ -1,6 +1,12 @@
-<h1>My recent works</h1>
 
-<%= link_to  "Create new item", new_recentwork_path %>
+<div class="container">
+ 
 
+  <h1 class= "header">My recent works</h1>
 
-<%= render partial:"item" ,collection: @portfolios  %>
+  <%= link_to  "Create new item", new_recentwork_path  if logged_in?(:site_admin)%>
+
+<div class="row d-flex">
+  <%= render partial:"item" ,collection: @portfolios  %>
+</div>
+</div>

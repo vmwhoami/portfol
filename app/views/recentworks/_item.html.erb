@@ -1,11 +1,10 @@
-<h2><%= link_to item.title, portfolio_show_path(item) %></h2>
 
-<h3><%= item.subtitle %></h3>
-
-<p><%= item.body %></p>
-
-<% image_tag item.thumb_image unless item.thumb_image.nil? %>
-
- <%= image_tag item.main_image  unless item.thumb_image.nil?  %> 
-<%= link_to  "Edit", edit_recentwork_path(item.id) if logged_in?(:site_admin) %>
-<%= link_to  "Delete", recentwork_path(item), method: :delete, data:{confirm: "Are you sure?"} if logged_in?(:site_admin)%>
+<div class="col-sm">
+    <h2><%= link_to item.title, portfolio_show_path(item) %></h2>
+    <h3><%= item.subtitle %></h3>
+    <p><%= item.body %></p>
+    <% image_tag item.thumb_image unless item.thumb_image.nil? %>
+    <%= image_tag item.main_image  unless item.thumb_image.nil?  %> 
+    <%= link_to  "Edit", edit_recentwork_path(item.id) if logged_in?(:site_admin) %>
+    <%= link_to  "Delete", recentwork_path(item), method: :delete, data:{confirm: "Are you sure?"} if logged_in?(:site_admin)%>
+</div>

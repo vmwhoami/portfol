@@ -31,10 +31,12 @@
       background-color: rgba(255, 0, 0, 0);
       position: absolute;
       z-index: 500;
-      transform: translate(-60%,-140%);
+      transform-origin: right;
+      transform: translate(-75%,-140%);
+      
       font-size: 2rem;
-    font-weight: 700;
-      width: 20rem;
+      font-weight: 700;
+      width: 10rem;
       height: 5rem;
       border-radius: 5rem;
       display: flex;
@@ -42,13 +44,13 @@
       justify-content: center;
       text-transform: uppercase;
       transition: transform cubic-bezier(0.44, 0.87, 0.83, 1.00) .3s,
-      background-color cubic-bezier(.04,.43,.76,.93).1s ;
+      width cubic-bezier(.04,.43,.76,.93) .1s ;
 
 
       &:hover{
         color: $white-color;
-        transform: translate(-75%,-140%);
         background-color:$main-color;
+        width: 20rem;
       }
     
     
@@ -69,6 +71,6 @@
 
 .mynav__link:hover + .mynav__link__a {
   color: $white-color;
-  transform: translate(-75%,-140%);
+  width: 20rem;
   background-color:$main-color;
 }

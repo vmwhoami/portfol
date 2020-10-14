@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @blog_title %></title>
+    <title><%=  @main_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="keywords" content="<%= keywords %>">
-    <%= favicon_link_tag asset_path('SVG/vmlogo.svg') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap"  %>
+    <%= favicon_link_tag asset_path('SVG/vmlogo.svg') %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-   <div class="container">
-      <%= render  "shared/notices" %>
-      <%= render "shared/nav" ,on: 'main' %>
-      <%= user_functionality %>
-        
+    <%= render "shared/nav"  %>
       <%= yield %>
-      <%= visitor_from %>
-      
-   </div>
-   <%= @copyright %>
   </body>
 </html>
