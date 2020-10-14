@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     end
   end
 
-root to:'recentworks#home'
+root to:'pages#home'
 end
