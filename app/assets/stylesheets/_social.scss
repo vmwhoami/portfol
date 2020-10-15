@@ -1,0 +1,21 @@
+.social{
+  margin-top: 2rem;
+  display: flex;
+
+  &__link{
+      display: flex;
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+      align-items: center;
+      justify-content: center;
+      background-color: $grey-color;
+      border-radius: 50%;
+      transition: all .3s;
+
+      &:hover{
+        background-color: $main-color;
+      }
+    }
+
+}
