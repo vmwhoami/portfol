@@ -1,9 +1,11 @@
 <h3 class="pb-3 mb-4 font-italic border-bottom">
-       From the Firehose
+     <%= blog.title %>
 </h3>
 <div class="blog-post">
-       <h2 class="blog-post-title"><%= blog.title %></h2>
-       <p class="blog-post-meta"><span> Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago</span><a href="#">Mark</a></p>
+       
+       <p class="blog-post-meta"><span> Published
+        <%= distance_of_time_in_words(blog.created_at, Time.now)%> 
+       ago by </span><%= blog.user.name %></p>
         <p><%= blog.body %></p>
 </div><!-- /.blog-post -->
 

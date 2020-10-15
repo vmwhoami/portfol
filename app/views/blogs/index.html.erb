@@ -1,29 +1,27 @@
-<div class="container">
-
-   <div class="container">
+<div class="container ">
+ 
 
       <div class="header my-5">
          <h1 class="header__h1 text-center">my <span class="header__color">blog</span>
             <span class="header__back">posts</span>
          </h1>
       </div>
+ 
 
-   </div>
-
-   <main role="main" class="container">
+   <main role="main" class="container ">
       <p id="notice"><%= notice %></p>
 
-      <div class="row">
-         <div class="col-md-8 blog-main">
+      <div class="row ">
+         <div class="col-md-8 blog-main grey-bg py-5">
             <%= render @blogs %>
-            <%= link_to 'New Blog', new_blog_path %>
+            <%= link_to 'New Blog', new_blog_path  %>
          </div><!-- /.blog-main -->
 
 
 
          <!-- .blog-sidebar -->
-         <aside class="col-md-4 blog-sidebar">
-            <div class="p-3 mb-3 bg-light rounded">
+         <aside class="col-md-4 blog-sidebar ">
+            <div class="p-3 mb-3   rounded  grey-bg">
                <h4 class="font-italic">About</h4>
                <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus
                   sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
