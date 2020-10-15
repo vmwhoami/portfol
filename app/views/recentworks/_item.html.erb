@@ -1,5 +1,5 @@
 
-
+<%= link_to  portfolio_show_path(item) do  %>
   <div class="col-md-6 col-lg-6 col-xl-4 ">
     <div class="card rounded my-5" >
       <%= image_tag item.thumb_image  unless item.thumb_image.nil? %>
@@ -9,7 +9,7 @@
       </div>
     </div>
  </div>
-
+<% end %>
 
 
 
