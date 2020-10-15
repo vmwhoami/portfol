@@ -1,12 +1,17 @@
 <h3 class="pb-3 mb-4 font-italic border-bottom">
-     <%= blog.title %>
+       <%= link_to  blog do %>
+       <%= blog.title %>
+       <% end %>
+
 </h3>
 <div class="blog-post">
-       
        <p class="blog-post-meta"><span> Published
-        <%= distance_of_time_in_words(blog.created_at, Time.now)%> 
-       ago by </span><%= blog.user.name %></p>
-        <p><%= blog.body %></p>
+                     <%= distance_of_time_in_words(blog.created_at, Time.now)%>
+                     ago by </span><%= blog.user.name %></p>
+       <p><%= blog.body %></p>
+       <%= link_to 'Read more', blog %>
+       <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin)  %>
+       <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %>
 </div><!-- /.blog-post -->
 
 
@@ -15,11 +20,9 @@
 
 <%# blog.title %>
 <%# blog.body %>
- 
+
 <%# <span> Published distance_of_time_in_words(blog.created_at, Time.now) ago</span> %>
 <%# link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin)  %>
-<%# link_to 'Show', blog %>
-<%# link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin)  %>
-<%# link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %>
+
 
 <%#------------ end of generated content------ %>

@@ -14,15 +14,8 @@
           passionate about building excellent software that improves the lives of those around me.
         </p>
 
-      
-        <%= link_to portfolio_path, class: "mybutton" do  %>
-         <span class= "mybutton__span">Portfolio</span> 
-          <i class="mybutton__icon">
-            <svg class="mybutton__svg">
-              <use xlink:href="#icon-suitcase" />
-            </svg>
-          </i>
-        <% end %>
+   <%= render  "shared/mybutton" %>
+
      <%= render  "shared/social_icons" %>
 
       </div>
