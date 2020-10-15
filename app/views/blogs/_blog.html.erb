@@ -1,9 +1,23 @@
-     
-       <%= blog.title %>
-       <%= blog.body %>
-        <span> Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago</span> 
-       <%= link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin)  %>
-       <%= link_to 'Show', blog %>
-       <%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin)  %>
-       <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %>
-       
+<h3 class="pb-3 mb-4 font-italic border-bottom">
+       From the Firehose
+</h3>
+<div class="blog-post">
+       <h2 class="blog-post-title"><%= blog.title %></h2>
+       <p class="blog-post-meta"><span> Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago</span><a href="#">Mark</a></p>
+        <p><%= blog.body %></p>
+</div><!-- /.blog-post -->
+
+
+
+<%# end of blogs %>
+
+<%# blog.title %>
+<%# blog.body %>
+ 
+<%# <span> Published distance_of_time_in_words(blog.created_at, Time.now) ago</span> %>
+<%# link_to blog.status, toggle_status_blog_path(blog) if logged_in?(:site_admin)  %>
+<%# link_to 'Show', blog %>
+<%# link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin)  %>
+<%# link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }  if logged_in?(:site_admin) %>
+
+<%#------------ end of generated content------ %>
