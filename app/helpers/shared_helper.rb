@@ -23,4 +23,7 @@ module SharedHelper
   end
   
 
+  def page_title(title = "Vitalie Melnic website")
+    title
+  end
 end

@@ -1,13 +1,16 @@
 
 <div class="container">
-   <h1 class= "header text-center my-5">My recent works</h1>
-
+   <div class="header my-5">
+      <h1 class= "header__h1 text-center">My <span class= "header__color">portfolio</span>
+      <span class="header__back">work</span>
+      </h1>
+   </div>
 
      <%= link_to  "Create new item", new_recentwork_path  if logged_in?(:site_admin)%>
 
-<div class="row">
+    <div class="row">
       <%= render partial:"item" ,collection: @portfolios  %>
-   </div>
+    </div>
 </div>
 
 
