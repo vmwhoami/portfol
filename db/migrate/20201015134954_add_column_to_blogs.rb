@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddColumnToBlogs < ActiveRecord::Migration[6.0]
   def change
     add_reference :blogs, :user, foreign_key: true

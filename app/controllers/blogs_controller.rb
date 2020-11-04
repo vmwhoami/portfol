@@ -1,18 +1,19 @@
+# frozen_string_literal: true
+
 class BlogsController < ApplicationController
-before_action :set_blog, only: [:show, :edit, :update, :destroy,:toggle_status]
-access all: [:show, :index], user: {except: [:destroy,:new,:create,:edit,:update, :toggle_status]}, site_admin: :all
+  before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  access all: %i[show index], user: { except: %i[destroy new create edit update toggle_status] }, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
-    @blog_title = "vmwhoami blog posts"
+    @blog_title = 'vmwhoami blog posts'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show
-  end
+  def show; end
 
   # GET /blogs/new
   def new
@@ -20,8 +21,7 @@ access all: [:show, :index], user: {except: [:destroy,:new,:create,:edit,:update
   end
 
   # GET /blogs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /blogs
   # POST /blogs.json
@@ -65,20 +65,22 @@ access all: [:show, :index], user: {except: [:destroy,:new,:create,:edit,:update
 
   def toggle_status
     if @blog.draft?
-      @blog.published! 
+      @blog.published!
     elsif @blog.published?
-      @blog.draft! 
+      @blog.draft!
     end
     redirect_to blogs_url, notice: 'Blog status successfully updated.'
   end
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
-    end
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def blog_params
+    params.require(:blog).permit(:title, :body)
+  end
 end
