@@ -1,3 +1,26 @@
-body{
-  background-color: red;
+@import 'variables';
+  
+.post-thumb {
+  border-radius:  1rem 1rem 0 0;
+	border-bottom: 1rem solid $main-color;
+}
+
+.entry-header h3 a {
+  color: $white-color;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.post-content {
+  background-color: #252525;
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.img-fluid{
+  width: 100%;
+  height: auto;
+object-fit: cover;
+  overflow: hidden;
+  border-radius:  1rem 1rem 0 0;
 }
