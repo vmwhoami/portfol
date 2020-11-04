@@ -7,4 +7,52 @@
       </h1>
    </div>
  
+ 
+   <div class="row">
+      <!-- Left Side Starts -->
+      <div class="col-12 col-lg-4">
+            <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Don't be shy !</h3>
+            <p class="mb-3">Get in touch I am  open to discuss new projects and ideas. </p>
+            <p class="custom-span-contact position-relative">
+               <%# here is the mail icon %>
+               <span class="d-block">mail me</span>vmwhoami@gmail.com
+            </p>
+
+            <p class="custom-span-contact position-relative">
+              <%# here is the phone icon %>
+
+               <span class="d-block">call me</span>+373 69442476
+            </p>
+    
+            <%= render 'shared/social_icons.html' %>
+      </div>
+      <!-- Left Side Ends -->
+
+      <!-- Contact Form Starts -->
+      <div class="col-12 col-lg-8">
+            <form class="contact_form" method="post" action="php/process-form.php">
+               <div class="contact_form">
+                  <div class="row">
+                        <div class="col-12 col-md-4">
+                           <input type="text" name="name" placeholder="YOUR NAME" class="">
+                        </div>
+                        <div class="col-12 col-md-4">
+                           <input type="email" name="email" placeholder="YOUR EMAIL">
+                        </div>
+                        <div class="col-12 col-md-4">
+                           <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                        </div>
+                        <div class="col-12"><grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="_1KJtL"></grammarly-extension>
+                           <textarea name="message" placeholder="YOUR MESSAGE" class="" spellcheck="false"></textarea>
+                         <%= render  "shared/mybutton" %>
+                        </div>
+                        <div class="col-12 form-message">
+                           <span class="output_message text-center font-weight-600 text-uppercase"></span>
+                        </div>
+                  </div>
+               </div>
+            </form>
+      </div>
+      <!-- Contact Form Ends -->
+   </div>
 </div>
