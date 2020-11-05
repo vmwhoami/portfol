@@ -1,0 +1,47 @@
+@import 'variables';
+
+.navigation{
+  &__checkbox{
+    display: none;
+  }
+  &__button{
+    background-color: $grey-color;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    border-radius: 1rem;
+    top:6rem;
+    right: 6rem;
+    z-index: 150;
+  }
+  &__background{
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    border-radius: 1rem;
+    top:6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($black-color,$grey-color);
+    z-index: 100;
+  }
+  &__nav{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 125;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+
+    &__a{}
+  }
+  &__icon{}
+
+  &__list{
+    list-style: none;
+  }
+}

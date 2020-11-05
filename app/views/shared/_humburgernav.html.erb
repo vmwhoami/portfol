@@ -7,40 +7,40 @@
     <ul class="navigation__list">
       <li class="navigation__item">
         <%= link_to root_path, class: "navigation__item" do  %>
-        <i class="mynav__icon">
+        <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-home" />
           </svg>
         </i>
-        <%= link_to "Home", root_path, class: 'navigation__item__a' %>
+         <span class = "navigation__item__a">Home</span>
         <% end %>
       </li>
 
       <li class="navigation__item">
         <%= link_to portfolio_path, class: "navigation__item" do  %>
-        <i class="mynav__icon">
+        <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-suitcase" />
           </svg>
         </i>
-        <%= link_to "Portfolio", portfolio_path, class: 'navigation__item__a' %>
+         <span class = "navigation__item__a">Portfolio</span>
         <% end %>
       </li>
       <li class="navigation__item">
 
         <%= link_to about_path, class: "navigation__item" do  %>
-        <i class="mynav__icon">
+        <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-user" />
           </svg>
         </i>
-        <%= link_to "About-me", about_path, class: 'navigation__item__a' %>
+        <span class = "navigation__item__a">About-me</span>
         <% end %>
       </li>
 
       <li class="navigation__item">
         <%= link_to contact_path, class: "navigation__item" do  %>
-        <i class="mynav__icon">
+        <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-envelope" />
           </svg>
@@ -51,7 +51,7 @@
 
       <li class="navigation__item">
         <%= link_to blogs_path, class: "navigation__item" do  %>
-        <i class="mynav__icon">
+        <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-pen1" />
           </svg>
