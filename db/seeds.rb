@@ -1,55 +1,81 @@
-# frozen_string_literal: true
 
-3.times do |t|
+@portfolio_images = [
+"https://raw.githubusercontent.com/vmwhoami/danceter/pre-development/app/assets/images/Screenshot_1.jpg",
+"https://github.com/vmwhoami/The-Next-Web/blob/master/img/screenshot.jpg?raw=true",
+"https://raw.githubusercontent.com/acushlakoncept/smashing-magazine/feature-home/assets/images/screenshot.png",
+"https://raw.githubusercontent.com/vmwhoami/Newsweek/working-branch/img/Screenshot_1.jpg",
+"https://raw.githubusercontent.com/vmwhoami/annual-concert/work-branch/img/screenshot_desktop.jpg",
+"https://raw.githubusercontent.com/vmwhoami/advanced-css/work-home/img/Screenshot_1.jpg",
+"https://raw.githubusercontent.com/vmwhoami/Trillo/work/img/Screenshot_Desktop.jpg"
+
+]
+
+User.create!(name:"Vitalie Melnic",email: "vmwhoami@gmail.com",password: "password")
+
+puts "="*100
+puts "++++++++++ User created++++++++"
+
+@technologies = ["Javascript","React","Ruby","Ruby on Rails","HTML","CSS"]
+6.times do |t|
   Topic.create!(
-    title: "Topic #{t}"
+    title: @technologies[t]
   )
 end
-puts 'Topics created'
+puts "="*100
+puts "++++++++++  Topics created ++++++++"
 
+ 
 10.times do |post|
+
+  tech = @technologies.sample
   Blog.create!(
-    title: "This is the title #{post}",
-    body: "  Dragée ice cream sweet cake jelly-o ice cream pie fruitcake.
-     Powder sweet roll sugar plum liquorice danish chocolate cake. Ice cream tootsie roll
-     sugar plum sesame snaps. Tootsie roll lollipop chocolate bar chocolate cake cake
-      cake chupa chups biscuit. Candy canes jelly beans pudding tart powder. Candy canes sweet roll tart ",
-    topic: Topic.last
+    user: User.first,
+    title: "I know #{ tech} and I love it!",
+    body: " #{tech} , often abbreviated as #{ tech} , is a programming language that conforms to the ECMAScript specification. #{ tech}  is high-level, often just-in-time compiled
+       ",
+    topic: Topic.find_by_title(tech)
   )
 end
-
+puts "="*100
 puts 'Blogs created'
 
 5.times do |skill|
+  tech = @technologies.sample
   Skill.create!(
-    name: "Rails #{skill}",
-    percentage_completed: 50
+    name: "Rails #{tech}",
+    percentage_completed: 70
   )
 end
-
+puts "="*100
 puts 'Skills created'
 
-8.times do |p|
+7.times do |p|
+  img =  @portfolio_images[p]
   Recentwork.create!(
-    title: "Portfolio #{p}",
+    title: @technologies.sample,
     subtitle: 'Html and CSS',
-    body: 'Caramels dragée tart pie. Halvah donut marshmallow muffin pie tootsie roll oat cake. Jelly beans wafer topping. Cheesecake gummies biscuit biscuit sweet. Wafer topping cupcake danish tiramisu macaroon carrot cake caramels. Pudding brownie jujubes chocolate donut cookie jelly beans oat cake. Fruitcake fruitcake chocolate cake dessert jelly-o biscuit. Marzipan sweet lemon drops candy canes wafer croissant cookie tiramisu. Halvah gummies candy canes marshmallow tart cupcake caramels. Gummies cotton candy cupcake powder jelly beans brownie dragée chocolate candy. Cupcake gummi bears pastry sesame snaps. Jelly beans macaroon fruitcake cookie. Sweet dessert danish sugar plum tootsie roll.',
-    main_image: 'https://via.placeholder.com/600x400',
-    thumb_image: 'https://via.placeholder.com/350x350'
+    body: 'Caramels dragée tart pie. Halvah donut marshmallow  ',
+    main_image: img,
+    thumb_image: img
   )
 end
-
+img =  @portfolio_images[-1]
 Recentwork.create!(
   title: 'Portfolio 1',
   subtitle: 'Ruby on Rails',
-  body: 'Caramels dragée tart pie. Halvah donut marshmallow muffin pie tootsie roll oat cake. Jelly beans wafer topping. Cheesecake gummies biscuit biscuit sweet. Wafer topping cupcake danish tiramisu macaroon carrot cake caramels. Pudding brownie jujubes chocolate donut cookie jelly beans oat cake. Fruitcake fruitcake chocolate cake dessert jelly-o biscuit. Marzipan sweet lemon drops candy canes wafer croissant cookie tiramisu. Halvah gummies candy canes marshmallow tart cupcake caramels. Gummies cotton candy cupcake powder jelly beans brownie dragée chocolate candy. Cupcake gummi bears pastry sesame snaps. Jelly beans macaroon fruitcake cookie. Sweet dessert danish sugar plum tootsie roll.',
-  main_image: 'https://via.placeholder.com/600x400',
-  thumb_image: 'https://via.placeholder.com/350x350'
+  body: 'Caramels dragée tart pie. 
+  Halvah donut marshmallow muffin pie tootsie roll oat
+   cake. Jelly beans wafer topping.  ',
+  main_image: img,
+  thumb_image: img
 )
 puts 'Recentwork created successfully'
-3.times do |t|
+4.times do |t|
+ 
   Recentwork.last.technologies.create!(
-    name: "Technology #{t}"
+    name: @technologies[t]
   )
 end
+
+puts "="*100
 puts 'Technologies created successfully'

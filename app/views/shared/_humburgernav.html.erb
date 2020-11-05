@@ -1,0 +1,64 @@
+<div class="navigation">
+  <input type="checkbox" class="navigation__checkbox" id="nav_toggle">
+  <label class="navigation__button" for="nav_toggle">Menu</label>
+  <div class="navigation__background">&nbsp;</div>
+  <%#------ This is where navigation starts------- %>
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <%= link_to root_path, class: "navigation__item" do  %>
+        <i class="mynav__icon">
+          <svg>
+            <use xlink:href="#icon-home" />
+          </svg>
+        </i>
+        <%= link_to "Home", root_path, class: 'navigation__item__a' %>
+        <% end %>
+      </li>
+
+      <li class="navigation__item">
+        <%= link_to portfolio_path, class: "navigation__item" do  %>
+        <i class="mynav__icon">
+          <svg>
+            <use xlink:href="#icon-suitcase" />
+          </svg>
+        </i>
+        <%= link_to "Portfolio", portfolio_path, class: 'navigation__item__a' %>
+        <% end %>
+      </li>
+      <li class="navigation__item">
+
+        <%= link_to about_path, class: "navigation__item" do  %>
+        <i class="mynav__icon">
+          <svg>
+            <use xlink:href="#icon-user" />
+          </svg>
+        </i>
+        <%= link_to "About-me", about_path, class: 'navigation__item__a' %>
+        <% end %>
+      </li>
+
+      <li class="navigation__item">
+        <%= link_to contact_path, class: "navigation__item" do  %>
+        <i class="mynav__icon">
+          <svg>
+            <use xlink:href="#icon-envelope" />
+          </svg>
+        </i>
+        <%= link_to "Contact", contact_path, class: 'navigation__item__a' %>
+        <% end %>
+      </li>
+
+      <li class="navigation__item">
+        <%= link_to blogs_path, class: "navigation__item" do  %>
+        <i class="mynav__icon">
+          <svg>
+            <use xlink:href="#icon-pen1" />
+          </svg>
+        </i>
+        <%= link_to "Blog", blogs_path, class: 'navigation__item__a' %>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+</div>
