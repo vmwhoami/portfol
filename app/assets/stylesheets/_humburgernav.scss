@@ -1,6 +1,11 @@
 @import 'variables';
 
 .navigation{
+   
+  display: none;
+
+
+
   &__checkbox{
     display: none;
   }
@@ -55,6 +60,10 @@
     // display: none;
   }
 
+  &__item{
+    display: flex;
+    align-items: center;
+  }
   &__itemlink{
     display: flex;
     align-items: center;
@@ -146,7 +155,20 @@
   top: 2rem;
 }
 
+&__checkbox:checked + &__button &__burger{
+  background-color: transparent;
+}
 
+&__checkbox:checked + &__button &__burger::before{
+  top: 0;
+  transform: rotate(135deg);
+}
+
+&__checkbox:checked + &__button &__burger::after{
+  top: 0;
+  transform: rotate(-135deg);
+ 
+}
 
 
 }
