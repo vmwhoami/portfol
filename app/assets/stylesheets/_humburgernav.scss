@@ -18,7 +18,7 @@
     position: fixed;
     border-radius: 1rem;
     top:6rem;
-    right: 6rem;
+    right: 2%;
     z-index: 150;
     box-shadow: 0 0 1rem rgba(0,0,0,.9);
     display: flex;
@@ -34,7 +34,7 @@
     position: fixed;
     border-radius: 1rem;
     top:6.5rem;
-    right: 6.5rem;
+    right: 2%;
     background-image: radial-gradient($black-color,$grey-color);
     z-index: 100;
     transition: all .8s cubic-bezier(.97,-0.25,.13,1.31);
