@@ -13,6 +13,13 @@
     top:6rem;
     right: 6rem;
     z-index: 150;
+    box-shadow: 0 0 1rem rgba(0,0,0,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
   }
   &__background{
     height: 6rem;
@@ -23,25 +30,124 @@
     right: 6.5rem;
     background-image: radial-gradient($black-color,$grey-color);
     z-index: 100;
+    transition: all .8s cubic-bezier(.97,-0.25,.13,1.31);
+
+    // transform: scale(100);
   }
   &__nav{
     height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 125;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  &__item{
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(.97,-0.25,.13,1.31);
 
-    &__a{}
   }
-  &__icon{}
 
   &__list{
     list-style: none;
+    // display: none;
   }
+
+  &__itemlink{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-size: 3rem;
+    color: $white-color;
+    text-transform: uppercase; 
+    font-weight: 600;
+ 
+    &:link,
+    &:visited{
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $main-color 50%);
+      background-size: 250%;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active{
+     background-position: 100%;
+     transform: translateX(1rem);
+     text-decoration: none;
+     color:$white-color;
+    }
+
+  }
+
+  &__icon{
+ margin-right: 1.5rem;
+    svg{
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+
+  //Functionality
+
+  &__checkbox:checked ~ &__background{
+    transform: scale(100);
+  }
+
+
+  
+  &__checkbox:checked ~ &__nav{
+    opacity: 1;
+    width: 100%;
+  }
+  
+//  Burger Menu 
+
+&__burger{
+  position: relative;
+
+  &,
+  &::before,
+  &::after{
+    position: absolute;
+    width: 5rem;
+    height: 3px;
+    background-color: $white-color;
+    display: inline-block;
+  }
+
+
+  &::before,
+  &::after{
+    content: "";
+    transition: all .3s cubic-bezier(.97,-0.25,.13,1.31);
+
+  }
+
+  &::before{
+    top: -1.5rem;
+  }
+
+  &::after{
+    top: 1.5rem;
+  }
+
+
 }
+
+&__button:hover &__burger::before{
+  top: -2rem;
+}
+
+
+&__button:hover &__burger::after{
+  top: 2rem;
+}
+
+
+
+
+}
+

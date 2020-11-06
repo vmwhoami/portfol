@@ -1,62 +1,64 @@
 <div class="navigation">
   <input type="checkbox" class="navigation__checkbox" id="nav_toggle">
-  <label class="navigation__button" for="nav_toggle">Menu</label>
+  <label class="navigation__button" for="nav_toggle">
+    <span class="navigation__burger"></span>
+  </label>
   <div class="navigation__background">&nbsp;</div>
   <%#------ This is where navigation starts------- %>
   <nav class="navigation__nav">
     <ul class="navigation__list">
       <li class="navigation__item">
-        <%= link_to root_path, class: "navigation__item" do  %>
+        <%= link_to root_path, class: "navigation__itemlink" do  %>
         <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-home" />
           </svg>
         </i>
-         <span class = "navigation__item__a">Home</span>
+         <span class = "navigation__item__span">Home</span>
         <% end %>
       </li>
 
       <li class="navigation__item">
-        <%= link_to portfolio_path, class: "navigation__item" do  %>
+        <%= link_to portfolio_path, class: "navigation__itemlink" do  %>
         <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-suitcase" />
           </svg>
         </i>
-         <span class = "navigation__item__a">Portfolio</span>
+         <span class = "navigation__item__span">Portfolio</span>
         <% end %>
       </li>
       <li class="navigation__item">
 
-        <%= link_to about_path, class: "navigation__item" do  %>
+        <%= link_to about_path, class: "navigation__itemlink" do  %>
         <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-user" />
           </svg>
         </i>
-        <span class = "navigation__item__a">About-me</span>
+        <span class = "navigation__item__span">About-me</span>
         <% end %>
       </li>
 
       <li class="navigation__item">
-        <%= link_to contact_path, class: "navigation__item" do  %>
+        <%= link_to contact_path, class: "navigation__itemlink" do  %>
         <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-envelope" />
           </svg>
         </i>
-        <%= link_to "Contact", contact_path, class: 'navigation__item__a' %>
+        <span class = "navigation__item__span">Contact</span>
         <% end %>
       </li>
 
       <li class="navigation__item">
-        <%= link_to blogs_path, class: "navigation__item" do  %>
+        <%= link_to blogs_path, class: "navigation__itemlink" do  %>
         <i class="navigation__icon">
           <svg>
             <use xlink:href="#icon-pen1" />
           </svg>
         </i>
-        <%= link_to "Blog", blogs_path, class: 'navigation__item__a' %>
+        <span class = "navigation__item__span">Blog</span>
         <% end %>
       </li>
     </ul>
