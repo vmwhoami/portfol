@@ -8,6 +8,12 @@
   cursor: pointer;
   z-index: 10000;
 
+    @media screen and (max-width:$bp-md) {
+      display: none;
+    }
+
+
+
   &__link{
     position: relative;
     width: 5rem;

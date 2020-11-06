@@ -1,22 +1,23 @@
+ 
 
-
-  <div class="col-12 col-md-6 col-lg-6 col-xl-4 my-5">
-    <article class="post-container d-block">
-        <div class="post-thumb">
-           <%= link_to  portfolio_show_path(item), class:"d-block position-relative overflow-hidden" do  %>
-              <%= image_tag item.thumb_image, class:"img-fluid" unless item.thumb_image.nil? %>
+  <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-5">
+    <article class="post_container d-block ">
+        <div class="post_thumb ">
+           <%= link_to  portfolio_show_path(item), class:"d-block position-relative overflow-hidden link_container" do  %>
+              <%= image_tag item.thumb_image, class:"img_fluid"  %>
             <% end %>
         </div>
-        <div class="post-content">
-            <div class="entry-header">
+        <div class="post_content">
+            <div class="entry_header">
                 <h3> <%= link_to item.title, portfolio_show_path(item), clss:'text-decoration-none' %> </h3>
             </div>
-            <div class="entry-content open-sans-font">
+            <div class="entry_content">
                 <p> <%= item.body %></p>
             </div>
         </div>
     </article>
 </div>
+ 
 
 
   <%# <div class="col-md-6 col-lg-6 col-xl-4 ">

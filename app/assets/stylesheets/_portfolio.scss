@@ -1,24 +1,46 @@
 @import 'variables';
   
-.post-thumb {
+.post_thumb {
+  display: flex;
   border-radius:  1rem 1rem 0 0;
 	border-bottom: 1rem solid $main-color;
 }
 
-.entry-header h3 a {
+.entry_header h3 a {
   color: $white-color;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
+  transition: all .3s;
+
+  &:hover{
+    text-decoration: none;
+    color: $main-color;
+  }
 }
 
-.post-content {
+.post_content {
   background-color: #252525;
   padding: 2rem 2.5rem 2.5rem 2.5rem;
   border-radius: 0 0 1rem 1rem;
 }
 
-.img-fluid{
-  object-fit: cover;
-  overflow: hidden;
-  border-radius:  1rem 1rem 0 0;
+.link_container{
+  display: inline-block;
+  height: 16rem;
+  &:hover .img_fluid{
+    transform: scale(1.2);
+  }
 }
+
+
+
+.img_fluid{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: top;
+ border-radius:  1rem 1rem 0 0;
+ transition: all 0.3s cubic-bezier(0.76, 0.74, 0.72, .8);
+}
+ 
+ 

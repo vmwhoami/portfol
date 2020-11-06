@@ -3,7 +3,9 @@
 .navigation{
    
   display: none;
-
+  @media screen and (max-width:$bp-md) {
+   display: block;
+  }
 
 
   &__checkbox{
