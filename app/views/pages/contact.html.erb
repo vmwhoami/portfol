@@ -15,16 +15,20 @@
       <div class="col-12 col-lg-4">
          <h3 class="text-uppercase custom-title mb-0 ft-wt-600 pb-3">Don't be shy !</h3>
          <p class="mb-3">Get in touch I am open to discuss new projects and ideas. </p>
-         <p class="contact position-relative">
+         <div class="contact position-relative">
             <i class="contact__icon">
                <svg>
                   <use xlink:href="#icon-envelope" />
                </svg>
             </i>
-            <span class="contact__details">mail me:</span>vmwhoami@gmail.com
-         </p>
 
-         <p class="contact position-relative">
+            <div class="contact__details">
+             <p>mail me:</p> 
+             <p>vmwhoami@gmail.com</p>
+            </div> 
+         </div>
+
+         <div class="contact position-relative">
             <%# here is the phone icon %>
 
             <i class="contact__icon">
@@ -33,8 +37,12 @@
                </svg>
             </i>
 
-            <span class="contact__details">call me:</span>+373 69442476
-         </p>
+            <div class="contact__details">
+             <p>call me:</p> 
+             <p> +373 69442476</p>
+            </div> 
+                 
+         </div>
 
          <%= render 'shared/social_icons.html' %>
       </div>
