@@ -1,10 +1,12 @@
+<% @icon = "suitcase"%>
+<% @text = "Portfolio" %>
 <main class="main">
   <div class="main__container">
     <div class="image">
-    
-<%= image_tag "my_picture.jpg", class:"image__img" %>
-    
-   
+
+      <%= image_tag "my_picture.jpg", class:"image__img" %>
+
+
     </div>
     <div class="about">
       <div class="about__container">
@@ -16,10 +18,10 @@
           I'm a Moldavian based developer focused on crafting clean & user‑friendly experiences, I am
           passionate about building excellent software that improves the lives of those around me.
         </p>
-          <%= render  "shared/mybutton" %>
-          <div class="social__container">
+        <%= render  "shared/mybutton" %>
+        <div class="social__container">
           <%= render  "shared/social_icons" %>
-          </div>
+        </div>
       </div>
     </div>
   </div>

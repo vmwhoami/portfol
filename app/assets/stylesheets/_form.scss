@@ -56,3 +56,23 @@
   content: "\f071";
   padding-right: 1rem;
 }
+
+.contact{
+ display: flex;
+ align-items: center;
+ margin-top: 2rem;
+&__icon{
+
+  svg{
+    width: 3rem;
+    height: 3rem;
+  }
+}
+ 
+  &__details{
+    flex: 1;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-left: 2rem;
+  }
+}

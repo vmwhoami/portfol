@@ -1,8 +1,11 @@
-     <%= link_to portfolio_path, class: "mybutton" do  %>
-         <span class= "mybutton__span">Portfolio</span> 
-          <i class="mybutton__icon">
-            <svg class="mybutton__svg">
-              <use xlink:href="#icon-suitcase" />
-            </svg>
-          </i>
-        <% end %>
+<% @icon %>
+<% @text %>
+
+<%= link_to portfolio_path, class: "mybutton" do  %>
+<span class="mybutton__span"><%= @text %></span>
+<i class="mybutton__icon">
+  <svg class="mybutton__svg">
+    <use xlink:href="#icon-<%= @icon %>" />
+  </svg>
+</i>
+<% end %>
