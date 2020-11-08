@@ -10,6 +10,10 @@
       color: $white-color;
       text-transform: uppercase;
       font-weight: 800;
+      @media screen and (max-width:$bp-md) {
+        font-weight: 600;
+        font-size: 4rem;
+      }
     }
 
     &__color{
@@ -25,5 +29,12 @@
     color: $grey-color;
     z-index: -1;
    letter-spacing: 1.5rem;
+   @media screen and (max-width:$bp-md) {
+    font-weight: 800;
+    top: 0;
+    letter-spacing: 5px;
+    font-size: 6rem;
+    
+  }
   }
 }
