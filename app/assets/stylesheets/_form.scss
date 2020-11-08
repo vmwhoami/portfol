@@ -95,4 +95,25 @@
      
     }
   }
+
+  &__button{
+    font-size: 1.8rem;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-position: 90% 50%;
+    background-repeat:no-repeat;
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    border-radius: 5rem;
+    transition: all .3s;
+
+    &:hover{
+      background-image:url('SVG/paper-plane.svg');
+      background-position: 94% 50%;
+      background-repeat:no-repeat;
+      
+    }
+  }
 }

@@ -1,8 +1,4 @@
-<%# @icon = "paper-plane" %>
-<%# @text = "Send" %>
-
 <div class="container">
-
    <div class="header my-5">
       <h1 class="header__h1 text-center">get in <span class="header__color">touch</span>
          <span class="header__back">contact</span>
@@ -76,8 +72,10 @@
                  
                      <%= f.text_area :message, placeholder: "YOUR MESSAGE" %>
 
-                      <%= f.submit "Send Message",class: "form_button" do %>
-
+                      <%= f.submit  "Send Message",class: "contact__button" do %>
+                            <svg>
+            <use xlink:href="#icon-home" />
+          </svg>
                       <% end %>
                      <%# render  "shared/mybutton" %>
                   </div>
