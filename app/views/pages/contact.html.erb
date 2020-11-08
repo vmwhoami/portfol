@@ -21,9 +21,9 @@
             </i>
 
             <div class="contact__details">
-             <p>mail me:</p> 
-             <p>vmwhoami@gmail.com</p>
-            </div> 
+               <p>mail me:</p>
+               <p>vmwhoami@gmail.com</p>
+            </div>
          </div>
 
          <div class="contact position-relative">
@@ -36,10 +36,10 @@
             </i>
 
             <div class="contact__details">
-             <p>call me:</p> 
-             <p> +373 69442476</p>
-            </div> 
-                 
+               <p>call me:</p>
+               <p> +373 69442476</p>
+            </div>
+
          </div>
 
          <%= render 'shared/social_icons.html' %>
@@ -50,41 +50,47 @@
 
       <!-- Contact Form Starts -->
       <div class="col-12 col-lg-8">
-  <!--   Form St -->
+         <!--   Form St -->
+         <%= render "shared/icons" %>
 
-         
-<%= form_with url: contact_path, scope: "contact",class:"contact_form"   do |f| %>
+         <%= form_with url: contact_path, scope: "contact",class:"contact_form"   do |f| %>
 
-            <div class="contact_form">
-               <div class="row">
-                  <div class="col-12 col-md-4">
-                      <%= f.text_field :name, placeholder: "YOUR NAME"%>
-                  </div>
-                  <div class="col-12 col-md-4">
-                   <%= f.text_field :email, placeholder: "YOUR EMAIL" %>
-                     
-                  </div>
-                  <div class="col-12 col-md-4">
-                   <%= f.text_field :subject, placeholder: "YOUR SUBJECT" %>
-                     
-                  </div>
-                  <div class="col-12">
-                 
-                     <%= f.text_area :message, placeholder: "YOUR MESSAGE" %>
+         <div class="contact_form">
+            <div class="row">
+               <div class="col-12 col-md-4">
+                  <%= f.text_field :name, placeholder: "YOUR NAME"%>
+               </div>
+               <div class="col-12 col-md-4">
+                  <%= f.text_field :email, placeholder: "YOUR EMAIL" %>
 
-                      <%= f.submit  "Send Message",class: "contact__button" do %>
-                            <svg>
-            <use xlink:href="#icon-home" />
-          </svg>
-                      <% end %>
-                     <%# render  "shared/mybutton" %>
-                  </div>
-                  <div class="col-12 form-message">
-                     <span class="output_message text-center font-weight-600 text-uppercase"></span>
-                  </div>
+               </div>
+               <div class="col-12 col-md-4">
+                  <%= f.text_field :subject, placeholder: "YOUR SUBJECT" %>
+
+               </div>
+               <div class="col-12">
+
+                  <%= f.text_area :message, placeholder: "YOUR MESSAGE" %>
+
+                  <%= button_tag( :class => "contact__button") do %>
+                  <span>Send Message</span>
+                  <i class="social__icon">
+                     <svg>
+                        <use xlink:href="#icon-paper-plane" />
+                     </svg>
+                  </i>
+                  <% end %>
+
+               </div>
+               <div class="col-12 form-message">
+                  <span class="output_message text-center font-weight-600 text-uppercase">
+                <%= flash_msgs %>
+                  </span>
                </div>
             </div>
-        <% end %>   <!--   Form End -->
+         </div>
+         <% end %>
+         <!--   Form End -->
       </div>
       <!-- Contact Form Ends -->
    </div>

@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+ 
 
 class PagesController < ApplicationController
   before_action :permitted_details, only: %i[create]
@@ -16,9 +16,9 @@ class PagesController < ApplicationController
     @contact = Contact.new(permitted_details)
     if @contact.save
       flash[:succes] = "Contact saved"
-      redirect_to contact_path
+      redirect_to root_path
     else
-      flash.now[:error] = "Contact couldn't be saved"
+      flash[:error] = @contact.errors.full_messages
       redirect_back(fallback_location: root_path)
     end
   end
