@@ -3,11 +3,12 @@
 module PagesHelper
 
   def flash_msgs
+  message = []
    flash.each do |err,msg|  
-       msg.each do |message| 
-       "<p>#{message}</p>".html_safe
-       end
+    message << msg
    end
+   message.join(";  ")
   end
+ 
   
 end
