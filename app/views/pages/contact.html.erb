@@ -1,5 +1,5 @@
-<% @icon = "paper-plane" %>
-<%  @text = "Send" %>
+<%# @icon = "paper-plane" %>
+<%# @text = "Send" %>
 
 <div class="container">
 
@@ -8,6 +8,8 @@
          <span class="header__back">contact</span>
       </h1>
    </div>
+
+
 
 
    <div class="row contact__container">
@@ -48,32 +50,43 @@
       </div>
       <!-- Left Side Ends -->
 
+
+
       <!-- Contact Form Starts -->
       <div class="col-12 col-lg-8">
-         <form class="contact_form" method="post" action="php/process-form.php">
+  <!--   Form St -->
+
+         
+<%= form_with url: contact_path, scope: "contact",class:"contact_form"   do |f| %>
+
             <div class="contact_form">
                <div class="row">
                   <div class="col-12 col-md-4">
-                     <input type="text" name="name" placeholder="YOUR NAME" class="">
+                      <%= f.text_field :name, placeholder: "YOUR NAME"%>
                   </div>
                   <div class="col-12 col-md-4">
-                     <input type="email" name="email" placeholder="YOUR EMAIL">
+                   <%= f.text_field :email, placeholder: "YOUR EMAIL" %>
+                     
                   </div>
                   <div class="col-12 col-md-4">
-                     <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                   <%= f.text_field :subject, placeholder: "YOUR SUBJECT" %>
+                     
                   </div>
                   <div class="col-12">
-                     <grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
-                        class="_1KJtL"></grammarly-extension>
-                     <textarea name="message" placeholder="YOUR MESSAGE" class="" spellcheck="false"></textarea>
-                     <%= render  "shared/mybutton" %>
+                 
+                     <%= f.text_area :message, placeholder: "YOUR MESSAGE" %>
+
+                      <%= f.submit "Send Message",class: "form_button" do %>
+
+                      <% end %>
+                     <%# render  "shared/mybutton" %>
                   </div>
                   <div class="col-12 form-message">
                      <span class="output_message text-center font-weight-600 text-uppercase"></span>
                   </div>
                </div>
             </div>
-         </form>
+        <% end %>   <!--   Form End -->
       </div>
       <!-- Contact Form Ends -->
    </div>
