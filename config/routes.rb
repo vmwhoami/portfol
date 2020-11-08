@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  put 'contact', to: 'pages#create_contact'
 
   resources :blogs do
     member do
