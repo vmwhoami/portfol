@@ -48,6 +48,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'email_validator', '~> 2.0', '>= 2.0.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'friendly_id', '~> 5.4.0'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
