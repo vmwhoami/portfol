@@ -3,6 +3,7 @@
 .post_thumb {
   display: flex;
   border-radius:  1rem 1rem 0 0;
+  overflow: hidden;
 	border-bottom: 1rem solid $main-color;
 }
 
@@ -29,6 +30,7 @@
   height: 16rem;
   &:hover .img_fluid{
     transform: scale(1.2);
+    border-radius:  1rem 1rem 0 0;
   }
 }
 
@@ -43,4 +45,17 @@
  transition: all 0.3s cubic-bezier(0.76, 0.74, 0.72, .8);
 }
  
- 
+ .new_item{
+   text-transform: uppercase;
+   background-color: $main-color;
+   padding: 1rem 2rem ;
+   color: $white-color;
+   font-weight: 700;
+   border-radius: 5rem;
+   transition: all 0.3s cubic-bezier(0.76, 0.74, 0.72, .8);
+
+   &:hover{
+     color: $white-color;
+     border-radius: 0;
+   }
+ }
