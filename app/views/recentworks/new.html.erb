@@ -1,32 +1,57 @@
-<h1>Create a new portfolio item</h1>
+<div class="container">
+
+
+  <div class="header my-5">
+      <h1 class= "header__h1 text-center">Create a new <span class= "header__color">item</span>
+      <span class="header__back">portfolio</span>
+      </h1>
+   </div>
+ 
 
 
 <%= form_with(model: @portfolio_item, local: true) do |form| %>
+ 
 
-  <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, "Numele websitului" %>
     <%= form.text_field :title %>
-  </div>
+ 
 
 
-
-  <div class="field">
-    <%= form.label :subtitle %>
+ 
+    <%= form.label :subtitle, "Subtitlul" %>
     <%= form.text_field :subtitle %>
-  </div>
+ 
+ 
+ 
+  
+    <%= form.label :github_link %>
+    <%= form.text_field  :github_link %>
+ 
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+   
+    <%= form.label :live_link %>
+    <%= form.text_field  :live_link %>
+ 
+
+   
+    <%= form.label :main_image %>
+    <%= form.text_field  :main_image %>
+ 
+
   <ul>
- <%= form.fields_for :technologies do |technology_form| %>
-   <li><%= technology_form.label :name %></li>
-   <li><%= technology_form.text_field  :name %></li>
+   <%= form.fields_for :technologies do |technology_form| %>
+    <li><%= technology_form.label :name %></li>
+    <li><%= technology_form.text_field  :name %></li>
    <% end %>
   </ul>
 
-  <div class="actions">
+
+   <%= form.label :body %>
+    <%= form.text_area :body %>
+
+ 
     <%= form.submit %>
-  </div>
+ 
 <% end %>
+
+</div>

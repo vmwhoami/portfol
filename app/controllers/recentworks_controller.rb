@@ -60,6 +60,6 @@ class RecentworksController < ApplicationController
   end
 
   def permited_params
-    params.require(:recentwork).permit(:title, :subtitle, :body, technologies_attributes: [:name])
+    params.require(:recentwork).permit(:title, :subtitle, :body, :github_link,:live_link, :main_image, :thumb_image , technologies_attributes: [:name])
   end
 end
