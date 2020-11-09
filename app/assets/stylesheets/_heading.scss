@@ -2,14 +2,20 @@
 @import 'variables';
 
 .header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  margin-top: 2rem;
+   
  
     &__h1{
+     
       font-size: 5rem;
       color: $white-color;
       text-transform: uppercase;
       font-weight: 800;
+
+
       @media screen and (max-width:$bp-md) {
         font-weight: 600;
         font-size: 4rem;
@@ -25,10 +31,12 @@
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%,-10%);
+    transform: translate(-50%,0);
     color: $grey-color;
     z-index: -1;
    letter-spacing: 1.5rem;
+
+
    @media screen and (max-width:$bp-md) {
     font-weight: 800;
     top: 0;
