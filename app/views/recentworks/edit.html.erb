@@ -1,24 +1,74 @@
+<div class="container">
 
-<%= form_with(model: @portfolio_item, local: true) do |form| %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="header my-5 col-12">
+    <h1 class="header__h1 ">Create a new <span class="header__color">item</span>
+      <span class="header__back">portfolio</span>
+    </h1>
   </div>
 
+  <%= render "shared/icons" %>
 
 
-  <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle %>
+  <div class="col-12 ">
+
+    <%= form_with(model: @portfolio_item, local: true, class:"contact_form") do |form| %>
+
+    <div class="contact_form">
+      <div class="row">
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field :title, placeholder: "Numele websitului" %>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field :subtitle,placeholder: "Subtitlul" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :github_link,placeholder: "Github Link" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :live_link,placeholder: "Live Link" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :main_image,placeholder: "Main image" %>
+        </div>
+
+        <div class="col-12 col-md-12">
+          <ul>
+            <%= form.fields_for :technologies do |technology_form| %>
+        
+            <li><%= technology_form.text_field :name,placeholder: "Technologies used"  %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <%= form.text_area :body,placeholder: "Body of your content" %>
+        </div>
+
+        <div class="col-12">
+          <%= button_tag( :class => "contact__button") do %>
+          <%= form.submit "Submit"  %>
+          <span>Create item</span>
+          <i class="social__icon">
+            <svg>
+              <use xlink:href="#icon-pencil1" />
+            </svg>
+          </i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
   </div>
+</div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<!--   Form St -->

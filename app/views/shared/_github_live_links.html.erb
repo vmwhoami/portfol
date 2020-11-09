@@ -1,0 +1,22 @@
+<% @github %>
+<% @live %>
+
+<div class="links__container">
+  <%= link_to   @github , :target => "_blank"   do%>
+      <span class="links__text">Github</span>
+      <i class="links__icon">
+        <svg>
+          <use xlink:href="#icon-github" />
+        </svg>
+      </i>
+  <% end %>
+
+  <%= link_to  @live , :target => "_blank" do%>
+      <span class="links__text">Live</span>
+        <i class="links__icon">
+        <svg>
+          <use xlink:href="#icon-earth" />
+        </svg>
+      </i>
+  <% end %>
+</div>

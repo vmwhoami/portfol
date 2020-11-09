@@ -22,6 +22,11 @@
           <% @portfolio_item.technologies.each do |t| %>
             <%= t.name %> 
           <% end %>
+
+          <% @github = @portfolio_item.github_link %>
+          <% @live = @portfolio_item.live_link %>
+          <%= render 'shared/github_live_links' %>
+
         </div>
     </div>
 </div>
