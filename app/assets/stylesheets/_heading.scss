@@ -2,6 +2,7 @@
 @import 'variables';
 
 .header{
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +32,7 @@
     position: absolute;
     top: -50%;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%,3rem);
     color: $grey-color;
     z-index: -1;
    letter-spacing: 1.5rem;
@@ -42,7 +43,7 @@
     top: 0;
     letter-spacing: 5px;
     font-size: 6rem;
-    
+    transform: translate(-50%,1rem);
   }
   }
 }

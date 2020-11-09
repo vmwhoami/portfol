@@ -6,7 +6,7 @@
       </h1>
    </div>
 
-     <%= link_to  "Create new item", new_recentwork_path  if logged_in?(:site_admin)%>
+ <%= add_portfolio_items %>
 
     <div class="row">
       <%= render partial:"item" ,collection: @portfolios  %>

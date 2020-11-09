@@ -1,7 +1,7 @@
  
 
   <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-5">
-    <article class="post_container d-block ">
+    <article class="post_container  ">
         <div class="post_thumb ">
            <%= link_to  portfolio_show_path(item), class:"d-block position-relative overflow-hidden link_container" do  %>
               <%= image_tag item.thumb_image, class:"img_fluid"  %>
@@ -19,23 +19,5 @@
 </div>
  
 
-
-  <%# <div class="col-md-6 col-lg-6 col-xl-4 ">
-    <div class="card rounded my-5" > %>
-      <%# image_tag item.thumb_image  unless item.thumb_image.nil? %>
-      <%# <div class="card-body"> %>
-        <%# <h5 class="card-title text-center"> link_to item.title, portfolio_show_path(item), clss:'text-decoration-none' </h5> %>
-        <%# <p class="card-text"> item.body </p> %>
-      <%# </div>
-    </div>
- </div> %>
-
-     <%# link_to item.title, portfolio_show_path(item) %> 
-     <%# item.subtitle %> 
-     <%# item.body %> 
-    <%# image_tag item.thumb_image unless item.thumb_image.nil? %>
-    <%# image_tag item.main_image  unless item.main_image.nil?  %> 
-    <%# link_to  "Edit", edit_recentwork_path(item.id) if logged_in?(:site_admin) %>
-    <%# link_to  "Delete", recentwork_path(item.id), method: :delete, data:{confirm: "Are you sure?"} if logged_in?(:site_admin)%>
 
 
