@@ -10,7 +10,7 @@
 
 ]
 
-User.create!(name:"Vitalie Melnic",email: "vmwhoami@gmail.com",password: "password")
+User.create!(name:"Vitalie Melnic",email: "vmwhoami@gmail.com",password: "password", roles: "site_admin")
 
 puts "="*100
 puts "++++++++++ User created++++++++"

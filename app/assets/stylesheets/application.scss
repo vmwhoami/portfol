@@ -1,7 +1,7 @@
 // @import "~bootstrap/scss/bootstrap";
 
 @import 'variables';
-@import  'home','btn','nav','heading','social','form','portfolio','humburgernav';
+@import  'home','btn','nav','heading','social','form','portfolio','humburgernav','login_register';
 
 
 
@@ -25,6 +25,9 @@ html{
 a,
 a:hover{
   text-decoration: none !important;
+}
+ul{
+  list-style: none;
 }
 
 body{

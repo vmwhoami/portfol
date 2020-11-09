@@ -1,46 +1,43 @@
-<div class="header my-5">
-  <h1 class="header__h1 text-center">admin <span class="header__color">login</span>
-    <span class="header__back">Authenticate</span>
-  </h1>
-</div>
-
-
 <div class="container">
-  <div class="row ">
-    <div class="col-md-4"></div>
-    <div class="col-md-4  mt-5">
-      <div class="card  px-5 py-5">
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg" %>
-        </div>
+  <div class="header my-5">
+    <h1 class="header__h1 text-center">admin <span class="header__color">login</span>
+      <span class="header__back">Authenticate</span>
+    </h1>
+  </div>
 
-        <div class="form-group">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-lg" %>
-        </div>
 
-        <% if devise_mapping.rememberable? %>
-        <div class="form-group">
-          <%= f.check_box :remember_me %>
-          <%= f.label :remember_me %>
-        </div>
-        <% end %>
 
-        <div class="form-group">
-          <%= f.submit "Log in", class: "mybutton"   %>
-      
-        </div>
-        <% end %>
-        <div class="col-md-12">
+  <div class="contact_form  col-12 d-flex">
+    <div class="card  col-4 justify-content-center p-5">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg" %>
+      </div>
 
-          <%= render "devise/shared/links" %>
-        </div>
+      <div class="form-group">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-lg" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+      <div class="form-group">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit "Log in", class: "mybutton"   %>
+
+      </div>
+      <% end %>
+      <div class="col-md-12">
+        <%= render "devise/shared/links" %>
       </div>
 
     </div>
-
   </div>
-  <div class="col-md-4"></div>
+
+
 </div>
