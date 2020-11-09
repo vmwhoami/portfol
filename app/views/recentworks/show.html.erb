@@ -1,19 +1,22 @@
 
 <div class="container">
-      <h1 class="text-center my-5"><%= @portfolio_item.title %></h1>
+  <div class="header my-5">
+    <h1 class="header__h1 text-center"><%= @portfolio_item.title %> <span class="header__color"></span>
+      <span class="header__back">portfolio</span>
+    </h1>
+  </div>
+       
 
-    <div class="row">
-        <div class="col-lg-6">
-          <%= image_tag @portfolio_item.main_image,class: "img-fluid" unless @portfolio_item.main_image.nil? %>
+    <div class="row mt-5">
+
+        <div class="col-lg-6 col-md-12">
+          <%= image_tag @portfolio_item.main_image, class: "img-fluid" %>
         </div>
-        <div class="col-lg-6">
-    
 
+
+        <div class="col-lg-6  col-md-12">
           <em><%= @portfolio_item.subtitle %></em>
           <p><%= @portfolio_item.body %></p>
-
-          <%# image_tag @portfolio_item.thumb_image unless @portfolio_item.thumb_image.nil? %>
-
           <h2>Technologies used</h2>
         <hr class="white-line">
           <% @portfolio_item.technologies.each do |t| %>

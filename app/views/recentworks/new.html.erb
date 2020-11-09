@@ -21,9 +21,6 @@
           <%= form.text_field :title, placeholder: "Numele websitului" %>
         </div>
 
-
-
-
         <div class="col-12 col-md-4">
           <%= form.text_field :subtitle,placeholder: "Subtitlul" %>
         </div>
@@ -43,11 +40,11 @@
           <%= form.text_field  :main_image,placeholder: "Main image" %>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-12">
           <ul>
             <%= form.fields_for :technologies do |technology_form| %>
-            <li><%= technology_form.label :name %></li>
-            <li><%= technology_form.text_field  :name %></li>
+        
+            <li><%= technology_form.text_field :name,placeholder: "Technologies used"  %></li>
             <% end %>
           </ul>
         </div>
@@ -57,15 +54,15 @@
         </div>
 
         <div class="col-12">
-          <%# button_tag( :class => "contact__button") do %>
+          <%= button_tag( :class => "contact__button") do %>
           <%= form.submit "Submit"  %>
-          <%# <span>Create item</span>
+          <span>Create item</span>
           <i class="social__icon">
             <svg>
               <use xlink:href="#icon-pencil1" />
             </svg>
-          </i> %>
-          <%# end %>
+          </i>
+          <% end %>
         </div>
       </div>
     </div>
