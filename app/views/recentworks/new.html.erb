@@ -2,56 +2,76 @@
 
 
   <div class="header my-5">
-      <h1 class= "header__h1 text-center">Create a new <span class= "header__color">item</span>
+    <h1 class="header__h1 text-center">Create a new <span class="header__color">item</span>
       <span class="header__back">portfolio</span>
-      </h1>
-   </div>
- 
+    </h1>
+  </div>
+
+  <%= render "shared/icons" %>
 
 
-<%= form_with(model: @portfolio_item, local: true) do |form| %>
- 
+  <div class="col-12 ">
 
-    <%= form.label :title, "Numele websitului" %>
-    <%= form.text_field :title %>
- 
+    <%= form_with(model: @portfolio_item, local: true, class:"contact_form") do |form| %>
 
+    <div class="contact_form">
+      <div class="row">
 
- 
-    <%= form.label :subtitle, "Subtitlul" %>
-    <%= form.text_field :subtitle %>
- 
- 
- 
-  
-    <%= form.label :github_link %>
-    <%= form.text_field  :github_link %>
- 
-
-   
-    <%= form.label :live_link %>
-    <%= form.text_field  :live_link %>
- 
-
-   
-    <%= form.label :main_image %>
-    <%= form.text_field  :main_image %>
- 
-
-  <ul>
-   <%= form.fields_for :technologies do |technology_form| %>
-    <li><%= technology_form.label :name %></li>
-    <li><%= technology_form.text_field  :name %></li>
-   <% end %>
-  </ul>
+        <div class="col-12 col-md-4">
+          <%= form.text_field :title, placeholder: "Numele websitului" %>
+        </div>
 
 
-   <%= form.label :body %>
-    <%= form.text_area :body %>
 
- 
-    <%= form.submit %>
- 
-<% end %>
 
+        <div class="col-12 col-md-4">
+          <%= form.text_field :subtitle,placeholder: "Subtitlul" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :github_link,placeholder: "Github Link" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :live_link,placeholder: "Live Link" %>
+        </div>
+
+
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :main_image,placeholder: "Main image" %>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <ul>
+            <%= form.fields_for :technologies do |technology_form| %>
+            <li><%= technology_form.label :name %></li>
+            <li><%= technology_form.text_field  :name %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <%= form.text_area :body,placeholder: "Body of your content" %>
+        </div>
+
+        <div class="col-12">
+          <%# button_tag( :class => "contact__button") do %>
+          <%= form.submit "Submit"  %>
+          <%# <span>Create item</span>
+          <i class="social__icon">
+            <svg>
+              <use xlink:href="#icon-pencil1" />
+            </svg>
+          </i> %>
+          <%# end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
 </div>
+
+<!--   Form St -->
