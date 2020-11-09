@@ -6,11 +6,11 @@
 
   &__link{
       display: flex;
-      width: 4rem;
-      height: 4rem;
-      margin: 1rem;
       align-items: center;
       justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem;
       background-color: $grey-color;
       border-radius: 50%;
       transition: all .3s;
@@ -20,4 +20,16 @@
       }
     }
 
+  &__icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__svg{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

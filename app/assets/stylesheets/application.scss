@@ -15,7 +15,7 @@ box-sizing:inherit;
 }
 
 html{
- font-size: 62.5% !important;
+ font-size: 62.5%;
 
  @media screen and (max-width:$bp-small) {
   font-size: 60%;
@@ -28,7 +28,7 @@ body{
 
 .container-fluid{
   margin: 0!important;
- padding: 0 !important;
+  padding: 0 !important;
   color: $white-color;
   font-weight: 400 !important;
   font-size: 1.6rem !important;
