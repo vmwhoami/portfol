@@ -8,36 +8,38 @@
 
 
   <div class="contact_form ">
-    <div class="card col-12 col-sm-12 col-md-6  mx-auto p-5 ">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-group">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg" %>
-      </div>
+    <div class="row">
+      <div class="card col-12 col-sm-12 col-md-6  mx-auto p-5 ">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-lg" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class:"form-control form-control-lg" %>
+        </div>
 
-      <% if devise_mapping.rememberable? %>
-      <div class="form-group">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
-      </div>
-      <% end %>
+        <% if devise_mapping.rememberable? %>
+        <div class="form-group">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+        <% end %>
 
-      <div class="form-group">
-        <%= f.submit "Log in", class: "mybutton"   %>
+        <div class="form-group">
+          <%= f.submit "Log in", class: "mybutton"   %>
+
+        </div>
+        <% end %>
+        <div class="col-md-12">
+          <%= render "devise/shared/links" %>
+        </div>
 
       </div>
-      <% end %>
-      <div class="col-md-12">
-        <%= render "devise/shared/links" %>
-      </div>
-
     </div>
+
+
   </div>
-
-
 </div>
