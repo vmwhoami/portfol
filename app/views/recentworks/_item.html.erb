@@ -12,7 +12,7 @@
                 <h3> <%= link_to item.title, portfolio_show_path(item), clss:'text-decoration-none' %> </h3>
             </div>
             <div class="entry_content">
-                <p> <%= item.body %></p>
+                <p> <%= item.body.truncate(50) %></p>
             </div>
         </div>
     </article>

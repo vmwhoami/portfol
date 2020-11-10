@@ -1,8 +1,9 @@
 <% @github %>
 <% @live %>
 
-<div class="links__container">
-  <%= link_to   @github , :target => "_blank"   do%>
+<div class="links">
+
+  <%= link_to   @github , :target => "_blank",class:"links__container"   do%>
       <span class="links__text">Github</span>
       <i class="links__icon">
         <svg>
@@ -11,7 +12,7 @@
       </i>
   <% end %>
 
-  <%= link_to  @live , :target => "_blank" do%>
+  <%= link_to  @live , :target => "_blank",class:"links__container" do%>
       <span class="links__text">Live</span>
         <i class="links__icon">
         <svg>
@@ -19,4 +20,5 @@
         </svg>
       </i>
   <% end %>
+
 </div>

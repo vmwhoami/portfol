@@ -20,7 +20,7 @@ class RecentworksController < ApplicationController
   def create
     @portfolio_item = Recentwork.new(permited_params)
     3.times { @portfolio_item.technologies.build }
-    debugger
+ 
     respond_to do |format|
       if @portfolio_item.save 
         format.html { redirect_to portfolio_path, notice: 'Portfolio item was successfully created' }
