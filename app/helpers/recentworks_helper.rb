@@ -9,6 +9,7 @@ module RecentworksHelper
   end
  
   def delete_item(item)
+    link_to  "Delete>", recentwork_path, method: :delete, class: " mt-5 links__container text-uppercase font-weight-bold text-danger"  if logged_in?(:site_admin)
   end
 
 end

@@ -14,11 +14,11 @@
         </div>
 
 
-        <div class="col-lg-6  col-md-12">
-          <em><%= @portfolio_item.subtitle %></em>
+        <div class=" col-12 col-lg-6  ">
+          <em class=" my-5 "><%= @portfolio_item.subtitle %></em>
           <p><%= @portfolio_item.body %></p>
           <h2>Technologies used</h2>
-        <hr class="white-line">
+        <hr class="white-line mr-5">
           <% @portfolio_item.technologies.each do |t| %>
             <%= t.name %> 
           <% end %>

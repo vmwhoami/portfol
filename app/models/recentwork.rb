@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Recentwork < ApplicationRecord
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
                                 reject_if: ->(attributes) { attributes['name'].blank? }
   include Placeholder
