@@ -2,7 +2,7 @@
 
 
   <div class="header my-5 col-12">
-    <h1 class="header__h1 ">Create a new <span class="header__color">item</span>
+    <h1 class="header__h1 ">Edit <span class="header__color">item</span>
       <span class="header__back">portfolio</span>
     </h1>
   </div>
@@ -14,7 +14,7 @@
 
     <%= form_with(model: @portfolio_item, local: true, class:"contact_form") do |form| %>
 
-    <div class="contact_form">
+  <div class="contact_form">
       <div class="row">
 
         <div class="col-12 col-md-4">
@@ -40,6 +40,12 @@
           <%= form.text_field  :main_image,placeholder: "Main image" %>
         </div>
 
+        
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :thumb_image, placeholder: "Thumb image" %>
+        </div>
+
+
         <div class="col-12 col-md-12">
           <ul>
             <%= form.fields_for :technologies do |technology_form| %>
@@ -49,13 +55,12 @@
           </ul>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-12">
           <%= form.text_area :body,placeholder: "Body of your content" %>
         </div>
 
         <div class="col-12">
           <%= button_tag( :class => "contact__button") do %>
-          
           <span>Edit item</span>
           <i class="social__icon">
             <svg>
@@ -70,5 +75,3 @@
 
   </div>
 </div>
-
-<!--   Form St -->

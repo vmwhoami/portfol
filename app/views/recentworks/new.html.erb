@@ -40,6 +40,12 @@
           <%= form.text_field  :main_image,placeholder: "Main image" %>
         </div>
 
+        
+        <div class="col-12 col-md-4">
+          <%= form.text_field  :thumb_image, placeholder: "Thumb image" %>
+        </div>
+
+
         <div class="col-12 col-md-12">
           <ul>
             <%= form.fields_for :technologies do |technology_form| %>
@@ -49,7 +55,7 @@
           </ul>
         </div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-12">
           <%= form.text_area :body,placeholder: "Body of your content" %>
         </div>
 
