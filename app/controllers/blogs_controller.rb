@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all.includes(:user)
+    render json: @blogs
     @blog_title = 'vmwhoami blog posts'
   end
 

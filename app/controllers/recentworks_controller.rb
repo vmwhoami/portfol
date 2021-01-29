@@ -6,6 +6,7 @@ class RecentworksController < ApplicationController
 
   def index
     @portfolios = Recentwork.all
+    render json: @portfolios
   end
 
   def home
