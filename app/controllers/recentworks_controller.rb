@@ -33,7 +33,9 @@ class RecentworksController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+ 
+   end
 
   def update
     respond_to do |format|
@@ -47,7 +49,9 @@ class RecentworksController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    render json: @portfolio_item 
+   end
 
   def destroy
     @portfolio_item.destroy
